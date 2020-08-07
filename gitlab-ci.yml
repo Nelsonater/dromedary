@@ -1,0 +1,13 @@
+before_script:
+  - yum install nodejs -y
+  - npm install
+  - npm install -g gulp
+
+# This folder is cached between builds
+cache:
+  paths:
+    - node_modules/
+
+test:
+  script:
+    - npm test
